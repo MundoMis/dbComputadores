@@ -5,7 +5,7 @@ Fonte da base: [Kaggle - Computer Price Prediction](https://www.kaggle.com/datas
 
 ---
 
-## 🚀 Etapas do Processo ETL
+## 🚀 Etapas do Processo ETL para Iniciantes
 
 ---
 
@@ -15,12 +15,12 @@ Fonte da base: [Kaggle - Computer Price Prediction](https://www.kaggle.com/datas
 00. [Criação do schema `dbComputadores`](./SQL/CreateSchema.sql)  
 00. [Criação da tabela Stage `StgComputadores`](./SQL/CreateStgComputadores.sql)  
 00. [Insert de dados na tabela Stage com `BULK INSERT`](./SQL/InsertStgComputadores.sql)  
-00. [Select com ajustes de dados da Stage](./SQL/SelectAjustesStgComputadores.sql)
 
 ---
 
 ### 🗃️ **Histórico**
 
+00. [Select com ajustes de dados da Stage](./SQL/SelectAjustesStgComputadores.sql)
 00. [Criação da tabela Histórica `HistComputadores`](./SQL/CreateTabelaHistComputadores.sql)  
 00. [Insert dos dados tratados na `HistComputadores`](./SQL/InsertHistComputadores.sql)
 
