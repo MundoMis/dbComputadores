@@ -28,13 +28,13 @@ Fonte da base: [Kaggle - Computer Price Prediction](https://www.kaggle.com/datas
 
 ### 🧩 **Dimensões**
 
-00. [Script para criação das tabelas dimensionais](./SQL/CreateDimComputadores.sql)  
-00. [Script para insert dos dados distintos em cada dimensão](./SQL/InsertDimComputadores.sql)
+00. [Script para criação e insert das tabelas dimensionais](./SQL/CreateAndInsertDinsComputadores.sql)  
 
 ---
 
 ### 🧮 **Fato**
 
+00. [Select e ajustes de relacionamento entre Historico e Dimensões](./SQL/SelectRelacionamentoFato.sql)
 00. [Criação da Tabela Fato `FatoComputadores`](./SQL/CreateTabelaFatoComputadores.sql)  
 00. [Insert de dados na `FatoComputadores` com JOINs substituindo os textos pelos IDs das dimensões](./SQL/InsertFatoComputadores.sql)
 
