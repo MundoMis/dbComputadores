@@ -1,7 +1,7 @@
 USE [dbComputadores]
 GO
 
--- Habilita as opÁıes avanÁadas e as consultas distribuÌdas
+-- Habilita as op√ß√µes avan√ßadas e as consultas distribu√≠das
 EXEC sp_configure 'show advanced options', 1;
 RECONFIGURE;
 EXEC sp_configure 'Ad Hoc Distributed Queries', 1;
@@ -13,9 +13,12 @@ TRUNCATE TABLE [dbComputadores].[Stage].[StgComputadores]
 BULK INSERT [dbComputadores].[Stage].[StgComputadores]
 FROM 'C:\Users\jealu\OneDrive\Documentos\MundoMis\dbComputadores\masaustu_data_kaggle.csv'
 WITH (
-    FIELDTERMINATOR = ',',  
-    ROWTERMINATOR = '0x0A', -- Para garantir que seja lido corretamente
-    FIRSTROW = 2,           
-    TABLOCK,                
-    CODEPAGE = '65001'       -- Usando UTF-8 para evitar problemas de caracteres
+	FORMAT = 'CSV',
+    FIELDTERMINATOR = ',', 
+    FIELDQUOTE = '"',              -- Aspas duplas geralmente s√£o usadas em CSVs
+    ROWTERMINATOR = '0x0A',        -- Quebra de linha (Linux-style)
+    FIRSTROW = 2,                  -- Ignora o cabe√ßalho
+    TABLOCK,                       -- Otimiza a performance da carga
+    CODEPAGE = '65001'             -- UTF-8
+
 );
